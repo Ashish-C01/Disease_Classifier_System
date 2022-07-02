@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="UTF-8">
+            <title>Navigation</title>
+            <link href='../static/style/style.css' type="text/css" rel="stylesheet">
+    </head>
+    <body>
+     <header >
+         <nav class="navbar" >
+             <ul>
+                    <li>Disease Detection</li>
+                    <li><a href="intro.html">Home</a></li>
+                    <li><a href="predict.html">Detect</a></li>
+                <li><a href="pneumonia.html">Pneumonia</a></li>
+                <li><a href="malaria.html">Malria</a></li>
+                <li><a href="liver.html">Liver</a></li>
+                <li><a href="heart.html">Heart</a></li>
+             </ul>  
+
+         </nav>
+     </header>
+     <div class="content">
+         <h1 style="text-align:center;text-transform:uppercase;">About the web application</h1>
+        <p>The project entitled Disease classification system is web application through which a patient can check if he/she has any of the diseases described below or not.</p>
+            
+            
+            <p>This system can detect following diseases:</p>
+            <ul>
+                <li>Pneumonia</li>
+                <li>Liver disease</li>
+            <li>Malaria</li>
+            <li>Heart attack</li>
+            </ul>
+        <p>The main objective of this web application is to reduce the amount of time spent while waiting for the report.</p>
+        <p>A right system can save a lot of money and also the time wasted while waiting for the report regarding the corresponding test.</p>
+        <h2>About Models used for disease classification</h2>
+        <h4>Pneumonia detection</h4>
+        <ul>
+        <li>This module is used to detect if the patient has pneumonia or not</li>
+        <li>Details about the model used for pneumonia detection</li>
+        <li>We have used deep learning to classify images as infectd or not</li>
+        <li>In this we have to give chest X-Ray as an input</li>
+        <!-- <img src="../static/p1.png" alt="model performance"> -->
+        <li>The model accuracy is 97.99% on training data and 95.30% on validation data</li>
+        <li>Some of the examples of the prediction of the models:</li>
+    </ul>
+
+        <img src="../static/p2.png">
+        <img src="../static/p3.png">
+        <h3>Malaria detection</h3>
+        <ul>
+        <li>This module is used to detect if the patient has malaria or not</li>
+        <li>Details about the model used for malaria detection</li>
+        <li>We have used deep learning to classify images as infectd or not</li>
+        <li>In this we have to give cell image as an input</li>
+        <li>The model accuracy is 96.28% on training data and 96.27% on validation data</li>
+        <li>Some of the examples of the prediction of the models:</li>
+    </ul>
+        <img src="../static/p4.png">
+        <img src="../static/p5.png">
+    
+        <h3>Heart attack detection</h3>
+    <ul>
+        <li>In this module the user can check if he/she has chances of getting heart attack or not</li>
+        <li>k nearest neighbor algorithm has been used to train the model</li>
+        <li>K-Nearest Neighbour is a Machine Learning algorithm based on Supervised Learning technique. K-NN algorithm assumes the similarity between the new case/data and available cases and put the new case into the category that is most similar to the available categories.</li>
+        <li>The model has 84.7% accuracy on training data and 91.80% accuracy on test data</li>
+        <li>The recall of this model for detection is good</li> 
+    </ul>
+        <h3>Liver disease detection</h3>
+        <ul>
+        <li>In this module the user can check if he/she has chances of getting liver disease or not</li>
+        <li>Deep learning has been used to train the model</li>
+        <li>The model has 89.92% accuracy on training data and 86.23% accuracy on test data</li>
+        <li>The user will have to provide numerical values as an input</li>
+    </ul>
+        
+        </div>
+    </body>
+</html> 

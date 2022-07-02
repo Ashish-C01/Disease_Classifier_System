@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="UTF-8">
+            <title>Pneumonia</title>
+            <link href='../static/style/style.css' type="text/css" rel="stylesheet">
+            
+
+    </head>
+    <body>
+     <header>
+         <nav class="navbar">
+             <ul>
+                    <li>Disease Detection</li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pneumonia.html">Pneumonia</a></li>
+                <li><a href="malaria.html">Malria</a></li>
+                <li><a href="liver.html">Kidney</a></li>
+                <li><a href="heart.html">Heart</a></li>
+             </ul>  
+
+         </nav>
+     </header>
+     <div class="classificationBtnDiv">
+        <button id="pnemoniaBtn" class="selectedButton" onclick="makeDivisionVisible('pnemonia')">Pneumonia Classification</button>
+        <button id="malariaBtn" class="classificationButton" onclick="makeDivisionVisible('pnemonia1')">Malaria Classification</button>     
+        <button id="liverBtn" class="classificationButton">Liver Disease Classification</button>
+        <button id="heartBtn" class="classificationButton">Heart Attack Classification</button>
+    </div>
+    <div class="classificationDiv">
+        <div id="pnemonia" style="height: 100%; width: 100%;">
+            <div id="clasificationInput" class="classificationBox">
+            
+                <!-- <form method="post" enctype="multipart/form-data" id="malariaFormData"> -->
+                    <div class="drop-zone">
+                        <span class="drop-zone__prompt">Drop file here or select</span> <!--for prompt-->  
+                        <input type="file" id="pneumonia_input_file" name="myfile1" class="drop-zone__input">
+                        
+                    </div>
+                    <input type="button" value="Predict" style="margin-left: 100px;margin-top: 20px;font-size: 25px;" onclick="pneumoniaClassificationButton()">
+                <!-- </form> -->
+        
+            </div>
+            <div id="classificationOutput" style="text-align: center;" class="classificationBox">
+                <h1 style="text-align: center;" id="classificationOuputResultPneumonia"></h1>
+            </div>
+            
+        </div>
+
+        <div id="pnemonia1" style="height: 100%;width: 100%;" hidden>
+            <div id="clasificationInput1" class="classificationBox">
+                <div class="drop-zone">
+                    <span class="drop-zone__prompt">Drop file here or select</span> <!--for prompt-->  
+                    <input type="file" id="pneumonia_input_file" name="myfile1" class="drop-zone__input">
+                    
+                </div>
+                <input type="button" value="Predict" style="margin-left: 100px;margin-top: 20px;font-size: 25px;" onclick="pneumoniaClassificationButton()">
+            </div>
+            <div id="classificationOutput1" class="classificationBox"></div>
+        </div>
+    </div>
+
+    <script>
+        let currentVisibleDivisionID = "pnemonia"
+        
+        function makeDivisionVisible(divisionID){
+            var existingDivisionElement = document.getElementById(currentVisibleDivisionID)
+            var newDivisionElement = document.getElementById(divisionID)
+            existingDivisionElement.setAttribute("hidden", true)
+            newDivisionElement.removeAttribute("hidden")
+            currentVisibleDivisionID = divisionID
+        }
+
+    </script>
+
+
+    <script type="text/javascript" src="../static/style/main.js"></script>
+    </body>
+</html>

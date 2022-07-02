@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="UTF-8">
+            <title>Liver</title>
+            <link href='../static/style/style.css' type="text/css" rel="stylesheet">
+            
+
+    </head>
+    <body>
+     <header>
+         <nav class="navbar">
+             <ul>
+                    <li>Disease Detection</li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pneumonia.html">Pneumonia</a></li>
+                <li><a href="malaria.html">Malria</a></li>
+                <li><a href="liver.html">Kidney</a></li>
+                <li><a href="heart.html">Heart</a></li>
+             </ul>  
+
+         </nav>
+     </header>
+     <div class="classificationBtnDiv">
+        <button id="pnemoniaBtn" class="selectedButton" onclick="makeDivisionVisible('pnemonia')">Pneumonia Classification</button>
+        <button id="malariaBtn" class="classificationButton" onclick="makeDivisionVisible('pnemonia1')">Malaria Classification</button>     
+        <button id="liverBtn" class="classificationButton">Liver Disease Classification</button>
+        <button id="heartBtn" class="classificationButton">Heart Attack Classification</button>
+    </div>
+    <div class="classificationDiv">
+        <div id="heart" style="height: 100%; width: 100%;" hidden>
+            <div id="clasificationInput" class="classificationBox">
+            
+                <!-- <form method="post"  id="LiverFormData"> -->
+                        <!-- <span class="drop-zone__prompt">Drop file here or select</span> 
+                        <input type="file" id="pneumonia_input_file" name="myfile1" class="drop-zone__input"> -->
+
+                        <div id='row1'>
+                        <br>
+                        Age:<input  type="text" name="Age" id="age" required>
+                        <br><br>
+                        Male<input  type="radio" name="gender" id="gender" value="Male" required>
+                        <br>
+                        Female:<input  type="radio" name="gender" id="gender" value="Female" required>
+                        <br>
+                        <br>
+                        CP:<input  type="text" name="CP" id="CP" required>
+                        
+                        <br><br>
+                        trtbps:<input  type="text" name="trtbps" id="trtbps" required>
+                        
+                        <br><br>
+                        Cholestrol<input  type="text" name="chol" id="chol" required>
+                        
+                        <br><br>
+                        FBS:<input  type="text" name="fbs" id="fbs" required>
+                        
+                        <br><br>
+                        RestECG:<input  type="text" name="rest_ecg" id="rest_ecg" required>
+                        
+                        <br><br>
+                        thalachh:<input  type="text" name="thalachh" id="thalachh" required>
+                        <br><br>
+                        exng:<input  type="text" name="exng" id="exng" required>
+                        </div> 
+                        <div id="row2">
+                        <br><br>
+                        oldpeak:<input  type="text" name="oldpeak" id="oldpeak" required>
+                        <br><br>
+                        slp:<input  type="text" name="slp" id="slp" required>
+                        <br><br>
+                        caa:<input  type="text" name="caa" id="caa" required>
+                        <br><br>
+                        thall:<input  type="text" name="thall" id="thall" required>
+                        <br>
+                    </div>
+                    <input id="btn" type="button" value="Predict"  onclick="liverClassificationButton()">
+                    <!-- style="margin-left: 140px;margin-top: 20px;font-size: 25px;" -->
+                 <!-- </form> -->
+        
+            </div>
+            <div id="classificationOutput" style="text-align: center;" class="classificationBox">
+                <h1 style="text-align: center;" id="classificationOuputResultLiver"></h1>
+            </div>
+            
+        </div>
+
+        <!-- <div id="pnemonia1" style="height: 100%;width: 100%;" hidden>
+            <div id="clasificationInput1" class="classificationBox">
+                <div class="drop-zone_1">
+                 <span class="drop-zone__prompt">Drop file here or select</span> 
+                    <input type="file" id="pneumonia_input_file" name="myfile1" class="drop-zone__input">
+
+                    
+                </div>
+                <input type="button" value="Predict" style="margin-left: 100px;margin-top: 20px;font-size: 25px;" onclick="pneumoniaClassificationButton()">
+            </div>
+            <div id="classificationOutput1" class="classificationBox"></div>
+        </div> -->
+    </div>
+
+    <script>
+        let currentVisibleDivisionID = "pnemonia"
+        
+        function makeDivisionVisible(divisionID){
+            var existingDivisionElement = document.getElementById(currentVisibleDivisionID)
+            var newDivisionElement = document.getElementById(divisionID)
+            existingDivisionElement.setAttribute("hidden", true)
+            newDivisionElement.removeAttribute("hidden")
+            currentVisibleDivisionID = divisionID
+        }
+
+    </script>
+
+
+    <script type="text/javascript" src="../static/style/main.js"></script>
+    </body>
+</html>
